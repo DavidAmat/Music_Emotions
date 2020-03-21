@@ -10,6 +10,7 @@ jupyter = "*"
 numpy = "*"
 pandas = "*"
 selenium = "*"
+tqdm = "*"
 
 [requires]
 python_version = "3.7"
