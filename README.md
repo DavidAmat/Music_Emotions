@@ -8,3 +8,5 @@
 - Use `pipenv install jupyter` and `pipenv run jupyter notebook` to launch notebook
 
 - For more commands look at  `/notes/pipenv_manual.md`
+
+- Hola Marta
