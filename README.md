@@ -6,3 +6,5 @@
 - Use `pipenv shell` to activate environment
 - Use `pipenv install <package>` to install packages
 - Use `pipenv install jupyter` and `pipenv run jupyter notebook` to launch notebook
+
+- For more commands look at  `/notes/pipenv_manual.md`
