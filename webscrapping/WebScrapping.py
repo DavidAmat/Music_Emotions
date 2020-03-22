@@ -27,7 +27,7 @@ import logging
 batch_num = int(sys.argv[1])
 
 # Fixed batch_size
-batch_size = 10
+batch_size = 1000
 
 
 # In[416]:
