@@ -26,8 +26,8 @@ CREATE UNIQUE INDEX idx_tid ON youtube_url (
 create table match (track_id INTEGER, url TEXT, batch_id INTEGER);
 create table nonmatch (track_id INTEGER, query TEXT, batch_id INTEGER);
 
-select * from match
-select * from nonmatch
+select * from match;
+select * from nonmatch;
 
 /*
 delete from match where 1=1
