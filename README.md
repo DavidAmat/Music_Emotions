@@ -103,9 +103,10 @@ AR006821187FB5192B	Stephen Varcoe
 
 #### 2. WebScrapping functions
 
-- We have 3 functions:
-	- **fun_clean_title**: gets a "tit_art" from MSD and cleans it to remove parenthesis (i.e (Explicit Version)). Only allowing by a regular expression strings starting by letters a-z.
-	- **get_MSD_title_Match_yt_title**: this is the most complex function. Basically it loops through all the youtube songs that has encountered the webscrapping. For each youtube (yt) song, if splits its words in a **set**. So, for **one yt song** it scans through **all the songs of that artist in the MSD**. For each comparison, it makes the intersection of the **set of yt title words** with the **MSD title words** (cleaned with the **fun_clean**). We will consider a **match** (meaning that we have found a soung from the youtube results of the query that matches a song for that artist in the MSD) only if the *length* of the set intersected is the same as the length of the set of the MSD title. For example:
+We have 3 functions:
+- **fun_clean_title**: gets a "tit_art" from MSD and cleans it to remove parenthesis (i.e (Explicit Version)). Only allowing by a regular expression strings starting by letters a-z.
+- **get_MSD_title_Match_yt_title**: this is the most complex function. Basically it loops through all the youtube songs that has encountered the webscrapping. For each youtube (yt) song, if splits its words in a **set**. So, for **one yt song** it scans through **all the songs of that artist in the MSD**. For each comparison, it makes the intersection of the **set of yt title words** with the **MSD title words** (cleaned with the **fun_clean**). We will consider a **match** (meaning that we have found a soung from the youtube results of the query that matches a song for that artist in the MSD) only if the *length* of the set intersected is the same as the length of the set of the MSD title. For example:
+
 ```sql
 /*
 Artist Name: Coldplay
@@ -118,7 +119,9 @@ MSD songs for Coldplay
 - Fix You (Official Video): {"fix", "you", "(Official", "Video)"} -> intsersection with Youtube title is {"fix", "you"} -> length = 2 !!!!!!
 */
 ```
-	That said, we see how the length match in this case = 2. So we will add this title and the href (youtube URL) to the **list_matching** list, which is one argument returned by this function. What the algorithm next does is it removes "Fix You" from the list of MSD songs for Coldplay, so now, we list will look:
+
+That said, we see how the length match in this case = 2. So we will add this title and the href (youtube URL) to the **list_matching** list, which is one argument returned by this function. What the algorithm next does is it removes "Fix You" from the list of MSD songs for Coldplay, so now, we list will look:
+
 ```sql
 /*
 Artist Name: Coldplay
@@ -130,11 +133,12 @@ MSD songs for Coldplay
 - Clocks: {"clocks"} -> intsersection with Youtube title is EMPTY
 */
 ```
-	So when inspecting the next title in youtube (i.e Paradise) the list of songs that it has to examine if it matches a MSD song has diminished. Since the Fix you song have already been found. This optimizes the search time and prevents that if there are multiple videos of the same song, the algorithm WILL NOT get all the URLs of that song name if it has already found 1.
 
-	- **WebScrapperYoutube**: this function takes the dataframe of the current batch and performs the webscrapping, so for each artist it applies the **get_MSD_title_Match_yt_title** function. Since it loops throuh all the rows (this loop has to be seen as a loop over artist names) we create 2 dictionaries:
-		- **dict_matching**: dictionary with primary key as artist_name, and with values a list of tuples, where each tuple is (track_id, youtube URL).
-		- **dict_non_matching**: for the songs that have not been found in youtube, it creates a primary key with the artist_name, and a list of tuples where each tuple is (titart, trackid). The idea is that with that dictionary we will create another database to look especifically in youtube the query: TITLE + ARTIST since we have seen that only looking at that ARTIST in youtube does not lead to any result. 
+So when inspecting the next title in youtube (i.e Paradise) the list of songs that it has to examine if it matches a MSD song has diminished. Since the Fix you song have already been found. This optimizes the search time and prevents that if there are multiple videos of the same song, the algorithm WILL NOT get all the URLs of that song name if it has already found 1.
+
+- **WebScrapperYoutube**: this function takes the dataframe of the current batch and performs the webscrapping, so for each artist it applies the **get_MSD_title_Match_yt_title** function. Since it loops throuh all the rows (this loop has to be seen as a loop over artist names) we create 2 dictionaries:
+- **dict_matching**: dictionary with primary key as artist_name, and with values a list of tuples, where each tuple is (track_id, youtube URL).
+- **dict_non_matching**: for the songs that have not been found in youtube, it creates a primary key with the artist_name, and a list of tuples where each tuple is (titart, trackid). The idea is that with that dictionary we will create another database to look especifically in youtube the query: TITLE + ARTIST since we have seen that only looking at that ARTIST in youtube does not lead to any result. 
 
 #### 3. WebScrapping calling functions on the batch artists
 
