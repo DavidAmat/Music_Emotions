@@ -9,13 +9,6 @@
 
 - For more commands look at  `/notes/pipenv_manual.md`
 
-- Hola Marta
-
-
-- Hola Marta desde la branca David
-- Hello David
-
-- Prova final 
 
 ## WebScrapping Codes
 
