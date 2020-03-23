@@ -11,6 +11,8 @@ numpy = "*"
 pandas = "*"
 selenium = "*"
 tqdm = "*"
+sqlalchemy = "*"
+v-log = "*"
 
 [requires]
 python_version = "3.7"
