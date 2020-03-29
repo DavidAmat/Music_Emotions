@@ -13,6 +13,10 @@ selenium = "*"
 tqdm = "*"
 sqlalchemy = "*"
 v-log = "*"
+youtube-dl = "*"
+awscli = "*"
+botocore = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.7"
