@@ -22,7 +22,7 @@ import logging
 
 # In[415]:
 
-
+# python WebScrapping.py 3
 # Arguments
 batch_num = int(sys.argv[1])
 
