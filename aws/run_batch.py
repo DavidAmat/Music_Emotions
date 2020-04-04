@@ -2,7 +2,7 @@ import os
 import time
 
 # for ii in range(1,36):
-#     print(f"os.system('python  WebScrapping_nonmatch.py {ii}')")
+#     print(f"os.system('python  WebScrapping_nonmatch.py {ii} 0')")
 #     print("time.sleep(1)")
 
 os.system('python  WebScrapping_nonmatch.py 16 0')

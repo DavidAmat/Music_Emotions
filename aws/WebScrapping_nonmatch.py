@@ -34,7 +34,7 @@ import numpy as np
 import tqdm
 
 #S3 interaction
-from io import StringIO 
+from io import StringIO
 import boto3
 
 # Logging
@@ -46,7 +46,7 @@ import logging
 
 # Arguments
 batch_num = int(sys.argv[1])
-
+num_iter = int(sys.argv[2])
 
 # In[17]:
 
@@ -55,10 +55,10 @@ batch_num = int(sys.argv[1])
 path_local_log_file = f"log/{batch_num}.log"
 log = VLogger(f'Batch {batch_num}', uri_log = path_local_log_file, file_log_level = logging.INFO)
 
- 
+
 
 #Regular expression to avoid strings in MSD initiated with NOT letters
-prog = re.compile("^[A-Za-z]") 
+prog = re.compile("^[A-Za-z]")
 
 def fun_clean_title(titart, prog, list_return = False):
     """
@@ -81,7 +81,7 @@ def fun_clean_title(titart, prog, list_return = False):
     else:
         return " ".join(words_clean)
 
-    
+
 ###########################################
 ###########################################
 
@@ -93,14 +93,14 @@ def fun_clean_title(titart, prog, list_return = False):
 # S3 load df from batch file
 def load_df_s3(folder_path, file_name, S3_BUCKET = 'musicemotions'):
     s3 = boto3.client("s3")
-    path_S3 = folder_path + "/" + file_name  
+    path_S3 = folder_path + "/" + file_name
     csv_obj = s3.get_object(Bucket = S3_BUCKET,  Key = path_S3)
     body = csv_obj['Body']
     csv_string = body.read().decode('utf-8')
     df = pd.read_csv(StringIO(csv_string))
     return df
 
-#save any local file in the EC2 instance to S3 
+#save any local file in the EC2 instance to S3
 def file_to_S3(local_path, S3_path,  S3_BUCKET = 'musicemotions'):
     """
     local_path = os.path.join("..","webscrapping","log","WebScrap.log")
@@ -157,7 +157,7 @@ log.info("1. Select all songs in nonmatch-query (S3) (Completed)")
 def query_yt_song(qq_song, query_set):
         #Search that artist on youtube
         browser.get(f"https://www.youtube.com/results?search_query={qq_song}")
-        
+
         # List all the elements in video-title
         vid_title_elems = browser.find_elements_by_id('video-title')
 
@@ -165,7 +165,7 @@ def query_yt_song(qq_song, query_set):
         for vte in vid_title_elems:
             yt_title =  vte.get_attribute("title")
             yt_href  =  vte.get_attribute('href')
-            
+
             #Compare that title with the query and if coincides in all words except 1 get that href
             if compare_song_vs_title(yt_title, query_set):
                 #Make sure that the href is not a playlist (hence playlist does not have href: None)
@@ -174,24 +174,24 @@ def query_yt_song(qq_song, query_set):
         return ""
 
 def compare_song_vs_title(yt_tit, query_set):
-    
+
     # YOUTUBE SONG to SET (cleaned)
     yt_set = fun_clean_title(yt_tit, prog, list_return=True) #returns a string
-    
+
     #SUBSTITUTE ANY NON ALPHANUMERICA CHARACTERS by white space
     yt_set = re.sub('[^0-9a-zA-Z]+', ' ', yt_set)
     yt_set = set(yt_set.split(" ")) #convert the words separated by spaces into a set
-    
+
     #Maybe that set contains words with one letter, so in that case we will remove them
     neat_query_set = set()
     for nn in list(query_set):
         if len(nn) > 1:
             neat_query_set.add(nn)
     query_set = neat_query_set; # only take the query set as the neat set without single letters or white spaces
-    
+
     # Intersection
     int_set = query_set.intersection(yt_set)
-    
+
     # Compare the length of the yt_set with the query set
     if len(int_set) >= (len(query_set) - 1): # allow one missing word in the intersection compared to the query set
         return True
@@ -200,10 +200,10 @@ def compare_song_vs_title(yt_tit, query_set):
             return True
     else:
         return False
-    
+
 def load_df_s3(folder_path, file_name, S3_BUCKET = 'musicemotions'):
     s3 = boto3.client("s3")
-    path_S3 = folder_path + "/" + file_name  
+    path_S3 = folder_path + "/" + file_name
     csv_obj = s3.get_object(Bucket = S3_BUCKET,  Key = path_S3)
     body = csv_obj['Body']
     csv_string = body.read().decode('utf-8')
@@ -213,17 +213,17 @@ def load_df_s3(folder_path, file_name, S3_BUCKET = 'musicemotions'):
 def save_df_to_S3(df, folder_path, name_file, S3_BUCKET = 'musicemotions'):
     #Connect to S3
     s3 = boto3.client("s3")
-    
+
     #Set the destination path
     path_S3 = folder_path + "/" + name_file
-    
+
     # Buffer dataframe to upload
     csv_buffer = StringIO()
     df.to_csv(csv_buffer, index = False)
 
     resp = s3.put_object(Bucket = S3_BUCKET, Key = path_S3, Body = csv_buffer.getvalue())
     return resp
-    
+
 def dmatch_to_df(dmatch, batch_num, columns_df):
     df = pd.DataFrame(dmatch.items())
     df.columns = columns_df
@@ -232,24 +232,24 @@ def dmatch_to_df(dmatch, batch_num, columns_df):
     return df
 
 def dmatch_to_S3(dmatch, batch_num, folder_path):
-    
+
     # Get the S3 file with that name
     name_file = f'{batch_num}.csv'
-    
+
     # From the match_results
     df_S3 = load_df_s3(folder_path, name_file)
-    
+
     # Get the dmatch and convert it to dataframe
     df_match = dmatch_to_df(dmatch, batch_num, columns_df = ["track_id","url"])
-    
+
     # Join the existing df in S3 with the df_match for that iteration
     df_concat = pd.concat([df_S3, df_match], axis=0)
-    
+
     # Save DMATCH to S3
     res = save_df_to_S3(df_concat, folder_path, name_file, S3_BUCKET = 'musicemotions')
-    
+
     return res
-    
+
 
 #######################################################################
 #######################################################################
@@ -269,30 +269,31 @@ iter_download = 50; #upload each 100 iterations
 
 for ii, row in tqdm.tqdm(df.iterrows()):
     counter_iteration += 1
-    
+    if ii<num_iter:
+        continue
     track_id = row["track_id"]
     query = row["query"]
     batch_id = row["batch_id"]
     query_clean_set = row["query_clean_set"]
     query_clean_list = row["query_clean_list"]
-    
+
     try:
         # Query yt song and compare the titles with the query set
         result = query_yt_song(query_clean_list, query_clean_set)
     except:
         log.info(f"    3.0 ERROR: Error in iteration : {counter_iteration}")
         continue
-    
+
     # Save the cases in which we find a match
     if len(result): #there is a href
         dict_match[track_id] = result
 
     # Upload each iter_download iterations
     if (counter_iteration % iter_download) == 0: #save each iter_download queried songs
-        res = dmatch_to_S3(dict_match, batch_num, "match-results")        
+        res = dmatch_to_S3(dict_match, batch_num, "match-results")
         dict_match = dict()
         log.info(f"    3.1 Uploaded Counter Iteration: {counter_iteration}")
-        
+
 browser.close()
 log.info("3 Starting webscrapping... (Completed)")
 log.info(f"5. Succesfully run batch: {batch_num}")
@@ -316,4 +317,3 @@ def file_to_S3(local_path, S3_path,  S3_BUCKET = 'musicemotions'):
 #       path log in S3
 log_S3_path = f"log/nonmatch-query/{batch_num}.log"
 resp_log = file_to_S3(path_local_log_file, log_S3_path,  S3_BUCKET = 'musicemotions')
-
