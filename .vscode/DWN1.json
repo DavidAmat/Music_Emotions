@@ -1,0 +1,10 @@
+{
+    "name": "DWNXX",
+    "host": "54.194.181.21",
+    "protocol": "sftp",
+    "port": 22,
+    "username": "ec2-user",
+    "remotePath": "/home/ec2-user",
+    "privateKeyPath": "D:\\Google Drive\\28. AWS\\ireland\\MyKeyIreland_VS.pem",
+    "uploadOnSave": true
+}
