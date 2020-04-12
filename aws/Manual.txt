@@ -226,21 +226,29 @@ sudo apt install build-essential libssl-dev libffi-dev python3-dev
 sudo pipenv install pipenv
 git clone https://github.com/DavidAmat/Music_Emotions
 
+sudo apt install python3.7
+pipenv shell
+pipenv install
+
+pipenv run jupyter notebook --generate-config
+vi /root/.jupyter/jupyter_notebook_config.py
+pipenv install pexpect 
+sudo apt install ffmpeg
+
+pipenv install awscli
+aws configure
+
+sudo apt install ffmpeg
+#cp -a /usr/local/bin/ffmpeg/ffmpeg-4.2.1-amd64-static/ . /usr/local/bin/ffmpeg/
+
+pipenv run jupyter notebook --no-browser --allow-root
 
 
-# PYTHON and PIPENV
-> sudo su
-> sudo yum install python37
-> curl -O https://bootstrap.pypa.io/get-pip.py
-> python3 get-pip.py --user
-> sudo pip3 install pipenv
-> add to ~/.bashrc file: sudo nano ~/.bashrc >   export PATH=/usr/local/bin:$PATH
-> source ~/.bashrc
+############################
+###########################
+Spotify API
+##########################
+#########################
+Client ID 348f94d3a73241188b2a89c91e1cfaee
+Client Secret b5b29b040ab843cf842cf4eb875caff1
 
-## GIT
-> sudo yum install git
-> cd /home/ec2-user/
-> git clone https://github.com/DavidAmat/Music_Emotions
-> cd Music_Emotions
-> git init
-> git pull origin master
