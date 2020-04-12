@@ -112,23 +112,16 @@ def file_to_S3(local_path, S3_path,  S3_BUCKET = 'musicemotions'):
 def get_destination_folder_mp3(audio_file):
     return os.path.join("fs",audio_file[2],audio_file[3],audio_file[4], audio_file)
 
-def upload_audio_minibatch():
+def upload_audio_minibatch(audio_file):
     """
     Takes the songs in /data folder and uploads them to the S3 bucket
     """
-    counter_uploaded_songs = 0
-    songs_to_upload = os.listdir("data")
-
-    for audio_file in songs_to_upload:
-        if ".mp3" not in audio_file:
-            continue
-        audio_local_path = os.path.join("data", audio_file)
-        audio_S3_path = get_destination_folder_mp3(audio_file)
-        resp_audio = file_to_S3(audio_local_path, audio_S3_path,  S3_BUCKET = 'musicemotions')
-        counter_uploaded_songs += 1
-        log.info(f"        -- Uploaded: {audio_file}")
-        os.remove(os.path.join("data", audio_file))
-    return counter_uploaded_songs
+    audio_local_path = os.path.join("data", audio_file)
+    audio_S3_path = get_destination_folder_mp3(audio_file)
+    resp_audio = file_to_S3(audio_local_path, audio_S3_path,  S3_BUCKET = 'musicemotions')
+    log.info(f"        -- Uploaded: {audio_file}")
+    os.remove(os.path.join("data", audio_file))
+    return True
 
 ######################################################################################################
 ## READ from S3 the songs that matched in the WEBSCRAP
@@ -144,7 +137,6 @@ log.info("1. Select all songs in match-query (S3) (Completed)")
 ## RUN the download!
 ######################################################################################################
 log.info("2. Running download iterations")
-iter_upload_each = 20 #each 50 songs, upload to S3
 
 for ii, row in df.iterrows():
     # In case we run the program from an iter
@@ -173,10 +165,14 @@ for ii, row in df.iterrows():
         log.info(f"        Skipped: {track_id}")
         continue
     
-    # When it reaches 50 downloads, do a round of uploadings to the S3 bucket
-    if (ii % iter_upload_each) == 0:
-        num_uploads = upload_audio_minibatch()
-        log.info(f"  Uploaded Counter Iteration: {ii}, Uploaded: {num_uploads} files")
+    # Upload song to S3
+    song_name_mp3 = track_id + ".mp3"
+    response_S3 = False
+    response_S3 = upload_audio_minibatch(song_name_mp3)
+    if response_S3:
+        log.info(f"  Uploaded Counter Iteration: {ii}, Uploaded: {song_name_mp3}")
+    else:
+        log.info(f"  Failed Upload at Counter Iteration: {ii}, Failed song: {song_name_mp3}")
 
 
 log.info("2. Running download iterations (Completed)")

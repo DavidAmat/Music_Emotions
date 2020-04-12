@@ -112,24 +112,17 @@ def file_to_S3(local_path, S3_path,  S3_BUCKET = 'musicemotions'):
 def get_destination_folder_mp3(audio_file):
     return os.path.join("fs",audio_file[2],audio_file[3],audio_file[4], audio_file)
 
-def upload_audio_minibatch():
+def upload_audio_minibatch(audio_file):
     """
     Takes the songs in /data folder and uploads them to the S3 bucket
     """
-    counter_uploaded_songs = 0
-    songs_to_upload = os.listdir("data")
+    audio_local_path = os.path.join("data", audio_file)
+    audio_S3_path = get_destination_folder_mp3(audio_file)
+    resp_audio = file_to_S3(audio_local_path, audio_S3_path,  S3_BUCKET = 'musicemotions')
+    log.info(f"        -- Uploaded: {audio_file}")
+    os.remove(os.path.join("data", audio_file))
+    return True
 
-    for audio_file in songs_to_upload:
-        if ".mp3" not in audio_file:
-            continue
-        audio_local_path = os.path.join("data", audio_file)
-        audio_S3_path = get_destination_folder_mp3(audio_file)
-        resp_audio = file_to_S3(audio_local_path, audio_S3_path,  S3_BUCKET = 'musicemotions')
-        counter_uploaded_songs += 1
-        log.info(f"        -- Uploaded: {audio_file}")
-        os.remove(os.path.join("data", audio_file))
-    return counter_uploaded_songs
-
-num_uploads = upload_audio_minibatch()
+num_uploads = upload_audio_minibatch("TRCNBYA12903D098B4.mp3")
 print(num_uploads)
       
