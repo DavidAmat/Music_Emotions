@@ -146,7 +146,11 @@ for ii, row in df.iterrows():
     track_id, url, batch_id = row
     
     # Get the audio sizes available and filter out those that are over the reasonable length
-    resp, size_audio, request_response = get_audio_size(url)
+    try:
+        resp, size_audio, request_response = get_audio_size(url)
+    except:
+        #ERROR: tsoVU04XA00: YouTube said: The uploader has not made this video available in your country.
+        log.info(f"        Skipped: {track_id}")
     
     # Skip the song that exceeds file size max in MiB:
     if not resp:
@@ -156,7 +160,11 @@ for ii, row in df.iterrows():
     comando_descargar_audio = comando_youtube(track_id, url)
         
     # Download the audio file
-    comando_output = subprocess.check_output(comando_descargar_audio, shell=True) 
+    try:
+        comando_output = subprocess.check_output(comando_descargar_audio, shell=True) 
+    except:
+        #ERROR: tsoVU04XA00: YouTube said: The uploader has not made this video available in your country.
+        log.info(f"        Skipped: {track_id}")
     if "100%" in str(comando_output):
         log.info(f"        Downloaded: {track_id}")
     else:
@@ -167,11 +175,14 @@ for ii, row in df.iterrows():
     # Upload song to S3
     song_name_mp3 = track_id + ".mp3"
     response_S3 = False
-    response_S3 = upload_audio_minibatch(song_name_mp3)
+    try:
+        response_S3 = upload_audio_minibatch(song_name_mp3)
+    except:
+        log.info(f"        Skipped: {track_id}")
     if response_S3:
-        log.info(f"  Iter: {counter_iteration}, Uploaded: {song_name_mp3}")
+        log.info(f"  Iter: {counter_iteration}, Uploaded: {track_id}")
     else:
-        log.info(f"  Iter: {counter_iteration}, Failed: {song_name_mp3}")
+        log.info(f"  Iter: {counter_iteration}, Failed: {track_id}")
 
 
 log.info("2. Running download iterations (Completed)")
