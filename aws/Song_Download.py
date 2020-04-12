@@ -119,7 +119,6 @@ def upload_audio_minibatch(audio_file):
     audio_local_path = os.path.join("data", audio_file)
     audio_S3_path = get_destination_folder_mp3(audio_file)
     resp_audio = file_to_S3(audio_local_path, audio_S3_path,  S3_BUCKET = 'musicemotions')
-    log.info(f"        -- Uploaded: {audio_file}")
     os.remove(os.path.join("data", audio_file))
     return True
 
