@@ -390,3 +390,274 @@ Traceback (most recent call last):
   File "/usr/lib/python3.7/subprocess.py", line 512, in run
     output=stdout, stderr=stderr)
 subprocess.CalledProcessError: Command 'youtube-dl -F https://www.youtube.com/watch?v=tsoVU04XA00' returned non-zero exit status 1.
+INFO     [2020-04-12 18:00:32] Batch 0              | 1. Select all songs in match-query (S3)
+match-results/0.csv
+INFO     [2020-04-12 18:00:33] Batch 0              | 1. Select all songs in match-query (S3) (Completed)
+INFO     [2020-04-12 18:00:33] Batch 0              | 2. Running download iterations
+INFO     [2020-04-12 18:00:36] Batch 0              |         Downloaded: TRCMQIF128E07935C4
+INFO     [2020-04-12 18:00:36] Batch 0              |   Iter: 122, Uploaded: TRCMQIF128E07935C4
+ERROR: tsoVU04XA00: YouTube said: The uploader has not made this video available in your country.
+Sorry about that.
+INFO     [2020-04-12 18:00:37] Batch 0              |         Skipped: TRXSSEI128F42A0954
+ERROR: tsoVU04XA00: YouTube said: The uploader has not made this video available in your country.
+Sorry about that.
+INFO     [2020-04-12 18:00:39] Batch 0              |         Skipped: TRXSSEI128F42A0954
+INFO     [2020-04-12 18:00:39] Batch 0              |         Downloaded: TRXSSEI128F42A0954
+INFO     [2020-04-12 18:00:39] Batch 0              |         Skipped: TRXSSEI128F42A0954
+INFO     [2020-04-12 18:00:39] Batch 0              |   Iter: 123, Failed: TRXSSEI128F42A0954
+INFO     [2020-04-12 18:00:42] Batch 0              |         Downloaded: TRCMUBD128EF357158
+INFO     [2020-04-12 18:00:43] Batch 0              |   Iter: 124, Uploaded: TRCMUBD128EF357158
+INFO     [2020-04-12 18:00:46] Batch 0              |         Downloaded: TRCMVVS12903CBF23B
+INFO     [2020-04-12 18:00:46] Batch 0              |   Iter: 125, Uploaded: TRCMVVS12903CBF23B
+INFO     [2020-04-12 18:00:50] Batch 0              |         Downloaded: TRFUNGK128F1455953
+INFO     [2020-04-12 18:00:50] Batch 0              |   Iter: 126, Uploaded: TRFUNGK128F1455953
+INFO     [2020-04-12 18:00:53] Batch 0              |         Downloaded: TRCMWWF128E0782275
+INFO     [2020-04-12 18:00:53] Batch 0              |   Iter: 127, Uploaded: TRCMWWF128E0782275
+INFO     [2020-04-12 18:01:01] Batch 0              |         Downloaded: TRPLXEB128F4282DB6
+INFO     [2020-04-12 18:01:02] Batch 0              |   Iter: 130, Uploaded: TRPLXEB128F4282DB6
+INFO     [2020-04-12 18:01:05] Batch 0              |         Downloaded: TRPLMYI128F935385B
+INFO     [2020-04-12 18:01:05] Batch 0              |   Iter: 131, Uploaded: TRPLMYI128F935385B
+INFO     [2020-04-12 18:01:09] Batch 0              |         Downloaded: TRCKUFH128F92E44D3
+INFO     [2020-04-12 18:01:09] Batch 0              |   Iter: 132, Uploaded: TRCKUFH128F92E44D3
+INFO     [2020-04-12 18:01:13] Batch 0              |         Downloaded: TRUPGJF128F9352785
+INFO     [2020-04-12 18:01:13] Batch 0              |   Iter: 133, Uploaded: TRUPGJF128F9352785
+INFO     [2020-04-12 18:01:16] Batch 0              |         Downloaded: TRUPGKM128F427C8A9
+INFO     [2020-04-12 18:01:16] Batch 0              |   Iter: 134, Uploaded: TRUPGKM128F427C8A9
+INFO     [2020-04-12 18:01:20] Batch 0              |         Downloaded: TRPKXFP128F423BC03
+INFO     [2020-04-12 18:01:20] Batch 0              |   Iter: 135, Uploaded: TRPKXFP128F423BC03
+INFO     [2020-04-12 18:01:23] Batch 0              |         Downloaded: TRPKXVV128F92F29CD
+INFO     [2020-04-12 18:01:24] Batch 0              |   Iter: 136, Uploaded: TRPKXVV128F92F29CD
+INFO     [2020-04-12 18:01:27] Batch 0              |         Downloaded: TRXUCTP128F42A1A74
+INFO     [2020-04-12 18:01:27] Batch 0              |   Iter: 137, Uploaded: TRXUCTP128F42A1A74
+INFO     [2020-04-12 18:01:30] Batch 0              |         Downloaded: TRLOIJC128F92CFDFC
+INFO     [2020-04-12 18:01:31] Batch 0              |   Iter: 138, Uploaded: TRLOIJC128F92CFDFC
+INFO     [2020-04-12 18:01:34] Batch 0              |         Downloaded: TRCLCDH12903CB12A4
+INFO     [2020-04-12 18:01:35] Batch 0              |   Iter: 139, Uploaded: TRCLCDH12903CB12A4
+INFO     [2020-04-12 18:01:38] Batch 0              |         Downloaded: TRRYTZZ128F934B65A
+INFO     [2020-04-12 18:01:38] Batch 0              |   Iter: 140, Uploaded: TRRYTZZ128F934B65A
+INFO     [2020-04-12 18:01:41] Batch 0              |         Downloaded: TRLOENA128F422AA07
+INFO     [2020-04-12 18:01:42] Batch 0              |   Iter: 141, Uploaded: TRLOENA128F422AA07
+INFO     [2020-04-12 18:01:45] Batch 0              |         Downloaded: TRLODKW128F42A0EED
+INFO     [2020-04-12 18:01:45] Batch 0              |   Iter: 142, Uploaded: TRLODKW128F42A0EED
+INFO     [2020-04-12 18:01:48] Batch 0              |         Downloaded: TRRYSWI128F931BEE9
+INFO     [2020-04-12 18:01:48] Batch 0              |   Iter: 143, Uploaded: TRRYSWI128F931BEE9
+INFO     [2020-04-12 18:01:51] Batch 0              |         Downloaded: TRPLEAG128F92C70A4
+INFO     [2020-04-12 18:01:52] Batch 0              |   Iter: 144, Uploaded: TRPLEAG128F92C70A4
+INFO     [2020-04-12 18:01:55] Batch 0              |         Downloaded: TRLNVYY128F4276761
+INFO     [2020-04-12 18:01:56] Batch 0              |   Iter: 145, Uploaded: TRLNVYY128F4276761
+INFO     [2020-04-12 18:01:58] Batch 0              |         Downloaded: TRLNSLP128F429C489
+INFO     [2020-04-12 18:01:59] Batch 0              |   Iter: 146, Uploaded: TRLNSLP128F429C489
+INFO     [2020-04-12 18:02:02] Batch 0              |         Downloaded: TRRYJBA128F92FA673
+INFO     [2020-04-12 18:02:03] Batch 0              |   Iter: 147, Uploaded: TRRYJBA128F92FA673
+INFO     [2020-04-12 18:02:06] Batch 0              |         Downloaded: TRFWZJT128F930CA4F
+INFO     [2020-04-12 18:02:06] Batch 0              |   Iter: 148, Uploaded: TRFWZJT128F930CA4F
+INFO     [2020-04-12 18:02:09] Batch 0              |         Downloaded: TRXOJEP128F4255022
+INFO     [2020-04-12 18:02:10] Batch 0              |   Iter: 149, Uploaded: TRXOJEP128F4255022
+INFO     [2020-04-12 18:02:13] Batch 0              |         Downloaded: TRCRHJD128F9329D58
+INFO     [2020-04-12 18:02:13] Batch 0              |   Iter: 150, Uploaded: TRCRHJD128F9329D58
+INFO     [2020-04-12 18:02:16] Batch 0              |         Downloaded: TRLFKDK128F42282AA
+INFO     [2020-04-12 18:02:17] Batch 0              |   Iter: 151, Uploaded: TRLFKDK128F42282AA
+INFO     [2020-04-12 18:02:20] Batch 0              |         Downloaded: TRCXIRU12903CB377E
+INFO     [2020-04-12 18:02:20] Batch 0              |   Iter: 152, Uploaded: TRCXIRU12903CB377E
+INFO     [2020-04-12 18:02:23] Batch 0              |         Downloaded: TRFNVPJ128F9312579
+INFO     [2020-04-12 18:02:24] Batch 0              |   Iter: 153, Uploaded: TRFNVPJ128F9312579
+INFO     [2020-04-12 18:02:27] Batch 0              |         Downloaded: TRCXMLR12903CF9FEF
+INFO     [2020-04-12 18:02:28] Batch 0              |   Iter: 154, Uploaded: TRCXMLR12903CF9FEF
+INFO     [2020-04-12 18:02:31] Batch 0              |         Downloaded: TRXJFUR128F423F080
+INFO     [2020-04-12 18:02:31] Batch 0              |   Iter: 155, Uploaded: TRXJFUR128F423F080
+INFO     [2020-04-12 18:02:34] Batch 0              |         Downloaded: TRXJCTN12903CBF236
+INFO     [2020-04-12 18:02:35] Batch 0              |   Iter: 156, Uploaded: TRXJCTN12903CBF236
+INFO     [2020-04-12 18:02:38] Batch 0              |         Downloaded: TRUXOBE128F92CCAFD
+INFO     [2020-04-12 18:02:38] Batch 0              |   Iter: 157, Uploaded: TRUXOBE128F92CCAFD
+INFO     [2020-04-12 18:02:41] Batch 0              |         Downloaded: TRPURSH128F425BAC7
+INFO     [2020-04-12 18:02:41] Batch 0              |   Iter: 158, Uploaded: TRPURSH128F425BAC7
+INFO     [2020-04-12 18:02:45] Batch 0              |         Downloaded: TRXINMI128F92FCC1A
+INFO     [2020-04-12 18:02:45] Batch 0              |   Iter: 159, Uploaded: TRXINMI128F92FCC1A
+INFO     [2020-04-12 18:02:48] Batch 0              |         Downloaded: TRRSROC128F146A859
+INFO     [2020-04-12 18:02:49] Batch 0              |   Iter: 160, Uploaded: TRRSROC128F146A859
+INFO     [2020-04-12 18:02:52] Batch 0              |         Downloaded: TRUXWMW128F4256CC6
+INFO     [2020-04-12 18:02:52] Batch 0              |   Iter: 161, Uploaded: TRUXWMW128F4256CC6
+INFO     [2020-04-12 18:02:55] Batch 0              |         Downloaded: TRLEWHX12903CB2481
+INFO     [2020-04-12 18:02:56] Batch 0              |   Iter: 162, Uploaded: TRLEWHX12903CB2481
+INFO     [2020-04-12 18:02:59] Batch 0              |         Downloaded: TRUXYHH12903CD50B8
+INFO     [2020-04-12 18:02:59] Batch 0              |   Iter: 163, Uploaded: TRUXYHH12903CD50B8
+INFO     [2020-04-12 18:03:02] Batch 0              |         Downloaded: TRCYFUX128F4257BC6
+INFO     [2020-04-12 18:03:02] Batch 0              |   Iter: 164, Uploaded: TRCYFUX128F4257BC6
+INFO     [2020-04-12 18:03:06] Batch 0              |         Downloaded: TRLEZBB128F92C51A6
+INFO     [2020-04-12 18:03:06] Batch 0              |   Iter: 165, Uploaded: TRLEZBB128F92C51A6
+INFO     [2020-04-12 18:03:10] Batch 0              |         Downloaded: TRXJKCU128F42169FE
+INFO     [2020-04-12 18:03:10] Batch 0              |   Iter: 166, Uploaded: TRXJKCU128F42169FE
+INFO     [2020-04-12 18:03:13] Batch 0              |         Downloaded: TRXJMTE128F92F9447
+INFO     [2020-04-12 18:03:14] Batch 0              |   Iter: 167, Uploaded: TRXJMTE128F92F9447
+INFO     [2020-04-12 18:03:17] Batch 0              |         Downloaded: TRXJMWE128F428724B
+INFO     [2020-04-12 18:03:17] Batch 0              |   Iter: 168, Uploaded: TRXJMWE128F428724B
+INFO     [2020-04-12 18:03:21] Batch 0              |         Downloaded: TRRTULP128F428A64A
+INFO     [2020-04-12 18:03:21] Batch 0              |   Iter: 169, Uploaded: TRRTULP128F428A64A
+INFO     [2020-04-12 18:03:24] Batch 0              |         Downloaded: TRCVXZT128F4249708
+INFO     [2020-04-12 18:03:25] Batch 0              |   Iter: 170, Uploaded: TRCVXZT128F4249708
+INFO     [2020-04-12 18:03:29] Batch 0              |         Downloaded: TRFPBAD128F1483782
+INFO     [2020-04-12 18:03:29] Batch 0              |   Iter: 171, Uploaded: TRFPBAD128F1483782
+INFO     [2020-04-12 18:03:32] Batch 0              |         Downloaded: TRUWUET12903CD89CC
+INFO     [2020-04-12 18:03:33] Batch 0              |   Iter: 172, Uploaded: TRUWUET12903CD89CC
+INFO     [2020-04-12 18:03:36] Batch 0              |         Downloaded: TRUWZDO12903CF4FEB
+INFO     [2020-04-12 18:03:36] Batch 0              |   Iter: 173, Uploaded: TRUWZDO12903CF4FEB
+INFO     [2020-04-12 18:03:39] Batch 0              |         Downloaded: TRRTOFO128F425EBBE
+INFO     [2020-04-12 18:03:40] Batch 0              |   Iter: 174, Uploaded: TRRTOFO128F425EBBE
+INFO     [2020-04-12 18:03:43] Batch 0              |         Downloaded: TRPTOXQ128F4273E88
+INFO     [2020-04-12 18:03:43] Batch 0              |   Iter: 175, Uploaded: TRPTOXQ128F4273E88
+INFO     [2020-04-12 18:03:46] Batch 0              |         Downloaded: TRLFRLW128F1482515
+INFO     [2020-04-12 18:03:47] Batch 0              |   Iter: 176, Uploaded: TRLFRLW128F1482515
+INFO     [2020-04-12 18:03:50] Batch 0              |         Downloaded: TRFOPJZ128F426F85D
+INFO     [2020-04-12 18:03:50] Batch 0              |   Iter: 177, Uploaded: TRFOPJZ128F426F85D
+INFO     [2020-04-12 18:03:53] Batch 0              |         Downloaded: TRUXDYW128F930D6EE
+INFO     [2020-04-12 18:03:53] Batch 0              |   Iter: 178, Uploaded: TRUXDYW128F930D6EE
+INFO     [2020-04-12 18:03:56] Batch 0              |         Downloaded: TRJALDC128F4299CF5
+INFO     [2020-04-12 18:03:57] Batch 0              |   Iter: 179, Uploaded: TRJALDC128F4299CF5
+INFO     [2020-04-12 18:04:00] Batch 0              |         Downloaded: TRRTLNF128F42A0426
+INFO     [2020-04-12 18:04:01] Batch 0              |   Iter: 180, Uploaded: TRRTLNF128F42A0426
+INFO     [2020-04-12 18:04:04] Batch 0              |         Downloaded: TRRTJMR128F4234FF0
+INFO     [2020-04-12 18:04:04] Batch 0              |   Iter: 181, Uploaded: TRRTJMR128F4234FF0
+INFO     [2020-04-12 18:04:07] Batch 0              |         Downloaded: TRUXLBH128F425F90C
+INFO     [2020-04-12 18:04:08] Batch 0              |   Iter: 182, Uploaded: TRUXLBH128F425F90C
+INFO     [2020-04-12 18:04:11] Batch 0              |         Downloaded: TRCWWSE12903D080AD
+INFO     [2020-04-12 18:04:11] Batch 0              |   Iter: 183, Uploaded: TRCWWSE12903D080AD
+INFO     [2020-04-12 18:04:14] Batch 0              |         Downloaded: TRPVATR128F149DC48
+INFO     [2020-04-12 18:04:14] Batch 0              |   Iter: 184, Uploaded: TRPVATR128F149DC48
+INFO     [2020-04-12 18:04:18] Batch 0              |         Downloaded: TRJAEDW128F934C17D
+INFO     [2020-04-12 18:04:18] Batch 0              |   Iter: 185, Uploaded: TRJAEDW128F934C17D
+INFO     [2020-04-12 18:04:21] Batch 0              |         Downloaded: TRFNDWB128F426F85F
+INFO     [2020-04-12 18:04:21] Batch 0              |   Iter: 186, Uploaded: TRFNDWB128F426F85F
+INFO     [2020-04-12 18:04:27] Batch 0              |         Downloaded: TRUZFFF128F4219311
+INFO     [2020-04-12 18:04:28] Batch 0              |   Iter: 188, Uploaded: TRUZFFF128F4219311
+INFO     [2020-04-12 18:04:31] Batch 0              |         Downloaded: TRJBYCX128F425F925
+INFO     [2020-04-12 18:04:31] Batch 0              |   Iter: 189, Uploaded: TRJBYCX128F425F925
+INFO     [2020-04-12 18:04:35] Batch 0              |         Downloaded: TRDAASK128E0781E40
+INFO     [2020-04-12 18:04:35] Batch 0              |   Iter: 190, Uploaded: TRDAASK128E0781E40
+INFO     [2020-04-12 18:04:39] Batch 0              |         Downloaded: TRFLYAR128F92EC5F8
+INFO     [2020-04-12 18:04:39] Batch 0              |   Iter: 191, Uploaded: TRFLYAR128F92EC5F8
+INFO     [2020-04-12 18:04:42] Batch 0              |         Downloaded: TRDAGHT128F42736BE
+INFO     [2020-04-12 18:04:42] Batch 0              |   Iter: 192, Uploaded: TRDAGHT128F42736BE
+INFO     [2020-04-12 18:04:46] Batch 0              |         Downloaded: TRFLWZI12903CA979F
+INFO     [2020-04-12 18:04:46] Batch 0              |   Iter: 193, Uploaded: TRFLWZI12903CA979F
+INFO     [2020-04-12 18:04:49] Batch 0              |         Downloaded: TRXHFAJ128F930DD46
+INFO     [2020-04-12 18:04:50] Batch 0              |   Iter: 194, Uploaded: TRXHFAJ128F930DD46
+INFO     [2020-04-12 18:04:53] Batch 0              |         Downloaded: TRFLVEN128F9354807
+INFO     [2020-04-12 18:04:53] Batch 0              |   Iter: 195, Uploaded: TRFLVEN128F9354807
+INFO     [2020-04-12 18:04:57] Batch 0              |         Downloaded: TRJCGTD128F931C11A
+INFO     [2020-04-12 18:04:58] Batch 0              |   Iter: 196, Uploaded: TRJCGTD128F931C11A
+INFO     [2020-04-12 18:05:01] Batch 0              |         Downloaded: TRLDELK128F92FFB7C
+INFO     [2020-04-12 18:05:01] Batch 0              |   Iter: 197, Uploaded: TRLDELK128F92FFB7C
+INFO     [2020-04-12 18:05:04] Batch 0              |         Downloaded: TRJCHKE128F93415A0
+INFO     [2020-04-12 18:05:05] Batch 0              |   Iter: 198, Uploaded: TRJCHKE128F93415A0
+INFO     [2020-04-12 18:05:08] Batch 0              |         Downloaded: TRXGRZV128F92F18B7
+INFO     [2020-04-12 18:05:08] Batch 0              |   Iter: 199, Uploaded: TRXGRZV128F92F18B7
+INFO     [2020-04-12 18:05:11] Batch 0              |         Downloaded: TRLDDRH128F930BBFC
+INFO     [2020-04-12 18:05:12] Batch 0              |   Iter: 200, Uploaded: TRLDDRH128F930BBFC
+INFO     [2020-04-12 18:05:15] Batch 0              |         Downloaded: TRFLPAS128F932A066
+INFO     [2020-04-12 18:05:16] Batch 0              |   Iter: 201, Uploaded: TRFLPAS128F932A066
+INFO     [2020-04-12 18:05:23] Batch 0              |         Downloaded: TRPWLBM128F429B547
+INFO     [2020-04-12 18:05:23] Batch 0              |   Iter: 202, Uploaded: TRPWLBM128F429B547
+INFO     [2020-04-12 18:05:27] Batch 0              |         Downloaded: TRCZLBJ128F92E634D
+INFO     [2020-04-12 18:05:27] Batch 0              |   Iter: 203, Uploaded: TRCZLBJ128F92E634D
+INFO     [2020-04-12 18:05:30] Batch 0              |         Downloaded: TRUYZMM128F428A0B2
+INFO     [2020-04-12 18:05:31] Batch 0              |   Iter: 204, Uploaded: TRUYZMM128F428A0B2
+INFO     [2020-04-12 18:05:34] Batch 0              |         Downloaded: TRCZIYH12903CDFAD2
+INFO     [2020-04-12 18:05:34] Batch 0              |   Iter: 205, Uploaded: TRCZIYH12903CDFAD2
+INFO     [2020-04-12 18:05:37] Batch 0              |         Downloaded: TRCYTBO12903CC3096
+INFO     [2020-04-12 18:05:38] Batch 0              |   Iter: 206, Uploaded: TRCYTBO12903CC3096
+INFO     [2020-04-12 18:05:41] Batch 0              |         Downloaded: TRLEJYG128F426EBC2
+INFO     [2020-04-12 18:05:41] Batch 0              |   Iter: 207, Uploaded: TRLEJYG128F426EBC2
+INFO     [2020-04-12 18:05:44] Batch 0              |         Downloaded: TRUYMAO128F9347E43
+INFO     [2020-04-12 18:05:45] Batch 0              |   Iter: 208, Uploaded: TRUYMAO128F9347E43
+INFO     [2020-04-12 18:05:48] Batch 0              |         Downloaded: TRJBGEL128F4219314
+INFO     [2020-04-12 18:05:48] Batch 0              |   Iter: 209, Uploaded: TRJBGEL128F4219314
+INFO     [2020-04-12 18:05:52] Batch 0              |         Downloaded: TRPVOHZ128F4287E6B
+INFO     [2020-04-12 18:05:53] Batch 0              |   Iter: 211, Uploaded: TRPVOHZ128F4287E6B
+INFO     [2020-04-12 18:05:56] Batch 0              |         Downloaded: TRLEHPB12903CB3DD4
+INFO     [2020-04-12 18:05:56] Batch 0              |   Iter: 212, Uploaded: TRLEHPB12903CB3DD4
+INFO     [2020-04-12 18:06:01] Batch 0              |         Downloaded: TRXHQTS128F9307BEF
+INFO     [2020-04-12 18:06:01] Batch 0              |   Iter: 214, Uploaded: TRXHQTS128F9307BEF
+INFO     [2020-04-12 18:06:06] Batch 0              |         Downloaded: TRCZCJV128EF35C76D
+INFO     [2020-04-12 18:06:06] Batch 0              |   Iter: 215, Uploaded: TRCZCJV128EF35C76D
+INFO     [2020-04-12 18:06:15] Batch 0              |         Downloaded: TRXHOHY128F426D0A0
+INFO     [2020-04-12 18:06:15] Batch 0              |   Iter: 216, Uploaded: TRXHOHY128F426D0A0
+INFO     [2020-04-12 18:07:01] Batch 0              |         Downloaded: TRRRUJT12903CE0117
+INFO     [2020-04-12 18:07:01] Batch 0              |   Iter: 217, Uploaded: TRRRUJT12903CE0117
+INFO     [2020-04-12 18:07:04] Batch 0              |         Downloaded: TRFMJFR128F9319C58
+INFO     [2020-04-12 18:07:05] Batch 0              |   Iter: 218, Uploaded: TRFMJFR128F9319C58
+INFO     [2020-04-12 18:07:09] Batch 0              |         Downloaded: TRUYXLE128F4241A5E
+INFO     [2020-04-12 18:07:09] Batch 0              |   Iter: 219, Uploaded: TRUYXLE128F4241A5E
+INFO     [2020-04-12 18:07:12] Batch 0              |         Downloaded: TRXHJWL12903CB1002
+INFO     [2020-04-12 18:07:13] Batch 0              |   Iter: 220, Uploaded: TRXHJWL12903CB1002
+INFO     [2020-04-12 18:07:17] Batch 0              |         Downloaded: TRCYMBT128F428A099
+INFO     [2020-04-12 18:07:17] Batch 0              |   Iter: 221, Uploaded: TRCYMBT128F428A099
+INFO     [2020-04-12 18:07:20] Batch 0              |         Downloaded: TRCVTMO128F92F9617
+INFO     [2020-04-12 18:07:21] Batch 0              |   Iter: 222, Uploaded: TRCVTMO128F92F9617
+INFO     [2020-04-12 18:07:24] Batch 0              |         Downloaded: TRXKLTE128F9313E56
+INFO     [2020-04-12 18:07:24] Batch 0              |   Iter: 223, Uploaded: TRXKLTE128F9313E56
+INFO     [2020-04-12 18:07:27] Batch 0              |         Downloaded: TRXKNWS128F92E6495
+INFO     [2020-04-12 18:07:28] Batch 0              |   Iter: 224, Uploaded: TRXKNWS128F92E6495
+INFO     [2020-04-12 18:07:31] Batch 0              |         Downloaded: TRLIFAQ128F933CF8E
+INFO     [2020-04-12 18:07:31] Batch 0              |   Iter: 225, Uploaded: TRLIFAQ128F933CF8E
+INFO     [2020-04-12 18:07:35] Batch 0              |         Downloaded: TRIYHUS128F426A48D
+INFO     [2020-04-12 18:07:35] Batch 0              |   Iter: 226, Uploaded: TRIYHUS128F426A48D
+INFO     [2020-04-12 18:07:38] Batch 0              |         Downloaded: TRPQLRR128F424431F
+INFO     [2020-04-12 18:07:38] Batch 0              |   Iter: 227, Uploaded: TRPQLRR128F424431F
+INFO     [2020-04-12 18:07:52] Batch 0              |         Downloaded: TRXNARP128F42AB4AF
+INFO     [2020-04-12 18:07:52] Batch 0              |   Iter: 229, Uploaded: TRXNARP128F42AB4AF
+INFO     [2020-04-12 18:07:55] Batch 0              |         Downloaded: TRLICOK128F92DEA01
+INFO     [2020-04-12 18:07:56] Batch 0              |   Iter: 230, Uploaded: TRLICOK128F92DEA01
+INFO     [2020-04-12 18:08:07] Batch 0              |         Downloaded: TRPQLBT128F9312F4A
+INFO     [2020-04-12 18:08:08] Batch 0              |   Iter: 231, Uploaded: TRPQLBT128F9312F4A
+INFO     [2020-04-12 18:08:12] Batch 0              |         Downloaded: TRLICII128F427CF5B
+INFO     [2020-04-12 18:08:12] Batch 0              |   Iter: 232, Uploaded: TRLICII128F427CF5B
+INFO     [2020-04-12 18:08:15] Batch 0              |         Downloaded: TRUUCIC128F930DE31
+INFO     [2020-04-12 18:08:16] Batch 0              |   Iter: 233, Uploaded: TRUUCIC128F930DE31
+INFO     [2020-04-12 18:08:19] Batch 0              |         Downloaded: TRFRFMQ128F4290B1C
+INFO     [2020-04-12 18:08:19] Batch 0              |   Iter: 234, Uploaded: TRFRFMQ128F4290B1C
+INFO     [2020-04-12 18:08:22] Batch 0              |         Downloaded: TRXMWIY128F92D2519
+INFO     [2020-04-12 18:08:23] Batch 0              |   Iter: 235, Uploaded: TRXMWIY128F92D2519
+INFO     [2020-04-12 18:08:25] Batch 0              |         Downloaded: TRUUESI128F42ADA33
+INFO     [2020-04-12 18:08:26] Batch 0              |   Iter: 236, Uploaded: TRUUESI128F42ADA33
+INFO     [2020-04-12 18:08:30] Batch 0              |         Downloaded: TRRVFZM128F426F27A
+INFO     [2020-04-12 18:08:30] Batch 0              |   Iter: 237, Uploaded: TRRVFZM128F426F27A
+INFO     [2020-04-12 18:08:33] Batch 0              |         Downloaded: TRLHVCR128F427BE2F
+INFO     [2020-04-12 18:08:34] Batch 0              |   Iter: 238, Uploaded: TRLHVCR128F427BE2F
+INFO     [2020-04-12 18:08:37] Batch 0              |         Downloaded: TRCTAPJ128F93351AE
+INFO     [2020-04-12 18:08:37] Batch 0              |   Iter: 239, Uploaded: TRCTAPJ128F93351AE
+INFO     [2020-04-12 18:08:40] Batch 0              |         Downloaded: TRCSNWY128E07818B9
+INFO     [2020-04-12 18:08:41] Batch 0              |   Iter: 240, Uploaded: TRCSNWY128E07818B9
+INFO     [2020-04-12 18:08:44] Batch 0              |         Downloaded: TRXNECQ128F9304EDE
+INFO     [2020-04-12 18:08:44] Batch 0              |   Iter: 241, Uploaded: TRXNECQ128F9304EDE
+INFO     [2020-04-12 18:08:47] Batch 0              |         Downloaded: TRUTVPB128F92FD386
+INFO     [2020-04-12 18:08:48] Batch 0              |   Iter: 242, Uploaded: TRUTVPB128F92FD386
+INFO     [2020-04-12 18:08:51] Batch 0              |         Downloaded: TRPPTRY12903CC38C7
+INFO     [2020-04-12 18:08:51] Batch 0              |   Iter: 243, Uploaded: TRPPTRY12903CC38C7
+INFO     [2020-04-12 18:08:54] Batch 0              |         Downloaded: TRRVVUV128F9310429
+INFO     [2020-04-12 18:08:55] Batch 0              |   Iter: 244, Uploaded: TRRVVUV128F9310429
+INFO     [2020-04-12 18:08:58] Batch 0              |         Downloaded: TRPPXAU128F1460F51
+INFO     [2020-04-12 18:08:58] Batch 0              |   Iter: 245, Uploaded: TRPPXAU128F1460F51
+INFO     [2020-04-12 18:09:02] Batch 0              |         Downloaded: TRLITPQ128F42A9929
+INFO     [2020-04-12 18:09:02] Batch 0              |   Iter: 246, Uploaded: TRLITPQ128F42A9929
+INFO     [2020-04-12 18:09:05] Batch 0              |         Downloaded: TRIXZGW128F93135CC
+INFO     [2020-04-12 18:09:06] Batch 0              |   Iter: 247, Uploaded: TRIXZGW128F93135CC
+INFO     [2020-04-12 18:09:09] Batch 0              |         Downloaded: TRLISHG128F92D5A5B
+INFO     [2020-04-12 18:09:09] Batch 0              |   Iter: 248, Uploaded: TRLISHG128F92D5A5B
+INFO     [2020-04-12 18:09:13] Batch 0              |         Downloaded: TRXNWTR128E0781F2E
+INFO     [2020-04-12 18:09:13] Batch 0              |   Iter: 249, Uploaded: TRXNWTR128E0781F2E
+INFO     [2020-04-12 18:09:16] Batch 0              |         Downloaded: TRRVVRV12903CD6C7C
+INFO     [2020-04-12 18:09:17] Batch 0              |   Iter: 250, Uploaded: TRRVVRV12903CD6C7C
+INFO     [2020-04-12 18:09:20] Batch 0              |         Downloaded: TRPPZXB128F92E6513
+INFO     [2020-04-12 18:09:21] Batch 0              |   Iter: 251, Uploaded: TRPPZXB128F92E6513
+INFO     [2020-04-12 18:09:24] Batch 0              |         Downloaded: TRCRZMU128F931E6C0
+INFO     [2020-04-12 18:09:25] Batch 0              |   Iter: 252, Uploaded: TRCRZMU128F931E6C0
+INFO     [2020-04-12 18:09:28] Batch 0              |         Downloaded: TRPQAVW128F4242FED
+INFO     [2020-04-12 18:09:28] Batch 0              |   Iter: 253, Uploaded: TRPQAVW128F4242FED
+INFO     [2020-04-12 18:09:31] Batch 0              |         Downloaded: TRIYDGH128F1456922
+INFO     [2020-04-12 18:09:32] Batch 0              |   Iter: 254, Uploaded: TRIYDGH128F1456922
+INFO     [2020-04-12 18:09:35] Batch 0              |         Downloaded: TRLIMRE128F92E08B5
+INFO     [2020-04-12 18:09:36] Batch 0              |   Iter: 255, Uploaded: TRLIMRE128F92E08B5
+INFO     [2020-04-12 18:09:39] Batch 0              |         Downloaded: TRCSFXH128F4267550
+INFO     [2020-04-12 18:09:39] Batch 0              |   Iter: 256, Uploaded: TRCSFXH128F4267550
+INFO     [2020-04-12 18:09:42] Batch 0              |         Downloaded: TRFRSOQ128F92DFE60
+INFO     [2020-04-12 18:09:43] Batch 0              |   Iter: 257, Uploaded: TRFRSOQ128F92DFE60

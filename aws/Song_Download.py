@@ -144,12 +144,12 @@ for ii, row in df.iterrows():
         continue
 
     track_id, url, batch_id = row
-    
     # Get the audio sizes available and filter out those that are over the reasonable length
     try:
         resp, size_audio, request_response = get_audio_size(url)
     except:
         #ERROR: tsoVU04XA00: YouTube said: The uploader has not made this video available in your country.
+        resp = False
         log.info(f"        Skipped: {track_id}")
     
     # Skip the song that exceeds file size max in MiB:
