@@ -1,0 +1,22 @@
+INFO     [2020-04-12 17:17:50] Batch 0              | 1. Select all songs in match-query (S3)
+match-results/0.csv
+INFO     [2020-04-12 17:17:50] Batch 0              | 1. Select all songs in match-query (S3) (Completed)
+INFO     [2020-04-12 17:17:50] Batch 0              | 2. Running download iterations
+INFO     [2020-04-12 17:17:53] Batch 0              |         Downloaded: TRNPEOL12903CBC2B8
+INFO     [2020-04-12 17:17:56] Batch 0              |         Downloaded: TRXRACP12903CDB5E3
+INFO     [2020-04-12 17:17:58] Batch 0              |         Downloaded: TRFTZYT12903CF81B1
+INFO     [2020-04-12 17:18:01] Batch 0              |         Downloaded: TRUQYPR128F92D067F
+INFO     [2020-04-12 17:18:04] Batch 0              |         Downloaded: TRIWOBB128F4264F5F
+INFO     [2020-04-12 17:18:08] Batch 0              |         Downloaded: TRURJVA128F931FAC2
+INFO     [2020-04-12 17:18:10] Batch 0              |         Downloaded: TRXQNOE128F932C2FD
+INFO     [2020-04-12 17:18:13] Batch 0              |         Downloaded: TRCNXRX128F4270ABD
+INFO     [2020-04-12 17:18:18] Batch 0              |         Downloaded: TRPNWLF128F92F7B78
+INFO     [2020-04-12 17:18:22] Batch 0              |         Downloaded: TRCOTCP12903CD43C4
+INFO     [2020-04-12 17:18:25] Batch 0              |         Downloaded: TRFTURH128F9330FCA
+INFO     [2020-04-12 17:18:29] Batch 0              |         Downloaded: TRPNZGM12903CD9143
+INFO     [2020-04-12 17:18:32] Batch 0              |         Downloaded: TRCOVPI128F931B5D0
+INFO     [2020-04-12 17:18:35] Batch 0              |         Downloaded: TRXQHWF12903D02324
+INFO     [2020-04-12 17:18:37] Batch 0              |         Downloaded: TRIWOVY12903CE68A5
+ERROR: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe

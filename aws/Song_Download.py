@@ -159,7 +159,6 @@ for ii, row in df.iterrows():
     comando_output = subprocess.check_output(comando_descargar_audio, shell=True) 
     if "100%" in str(comando_output):
         log.info(f"        Downloaded: {track_id}")
-        continue
     else:
         # create a log info event indicating that error
         log.info(f"        Skipped: {track_id}")
@@ -170,9 +169,9 @@ for ii, row in df.iterrows():
     response_S3 = False
     response_S3 = upload_audio_minibatch(song_name_mp3)
     if response_S3:
-        log.info(f"  Uploaded Counter Iteration: {ii}, Uploaded: {song_name_mp3}")
+        log.info(f"  Iter: {ii}, Uploaded: {song_name_mp3}")
     else:
-        log.info(f"  Failed Upload at Counter Iteration: {ii}, Failed song: {song_name_mp3}")
+        log.info(f"  Iter: {ii}, Failed: {song_name_mp3}")
 
 
 log.info("2. Running download iterations (Completed)")
