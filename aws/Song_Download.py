@@ -136,10 +136,11 @@ log.info("1. Select all songs in match-query (S3) (Completed)")
 ## RUN the download!
 ######################################################################################################
 log.info("2. Running download iterations")
-
+counter_iteration = 0;
 for ii, row in df.iterrows():
+    counter_iteration += 1
     # In case we run the program from an iter
-    if ii < num_iter:
+    if counter_iteration < num_iter:
         continue
 
     track_id, url, batch_id = row
@@ -168,9 +169,9 @@ for ii, row in df.iterrows():
     response_S3 = False
     response_S3 = upload_audio_minibatch(song_name_mp3)
     if response_S3:
-        log.info(f"  Iter: {ii}, Uploaded: {song_name_mp3}")
+        log.info(f"  Iter: {counter_iteration}, Uploaded: {song_name_mp3}")
     else:
-        log.info(f"  Iter: {ii}, Failed: {song_name_mp3}")
+        log.info(f"  Iter: {counter_iteration}, Failed: {song_name_mp3}")
 
 
 log.info("2. Running download iterations (Completed)")

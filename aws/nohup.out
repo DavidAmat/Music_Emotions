@@ -20,3 +20,109 @@ INFO     [2020-04-12 17:18:37] Batch 0              |         Downloaded: TRIWOV
 ERROR: [Errno 32] Broken pipe
 Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
 BrokenPipeError: [Errno 32] Broken pipe
+INFO     [2020-04-12 17:24:50] Batch 0              | 1. Select all songs in match-query (S3)
+match-results/0.csv
+INFO     [2020-04-12 17:24:50] Batch 0              | 1. Select all songs in match-query (S3) (Completed)
+INFO     [2020-04-12 17:24:50] Batch 0              | 2. Running download iterations
+INFO     [2020-04-12 17:24:53] Batch 0              |         Downloaded: TRNPEOL12903CBC2B8
+INFO     [2020-04-12 17:24:54] Batch 0              |   Iter: 10232, Uploaded: TRNPEOL12903CBC2B8.mp3
+INFO     [2020-04-12 17:24:57] Batch 0              |         Downloaded: TRXRACP12903CDB5E3
+INFO     [2020-04-12 17:24:57] Batch 0              |   Iter: 17721, Uploaded: TRXRACP12903CDB5E3.mp3
+INFO     [2020-04-12 17:25:00] Batch 0              |         Downloaded: TRFTZYT12903CF81B1
+INFO     [2020-04-12 17:25:01] Batch 0              |   Iter: 4348, Uploaded: TRFTZYT12903CF81B1.mp3
+INFO     [2020-04-12 17:25:04] Batch 0              |         Downloaded: TRUQYPR128F92D067F
+INFO     [2020-04-12 17:25:04] Batch 0              |   Iter: 15503, Uploaded: TRUQYPR128F92D067F.mp3
+INFO     [2020-04-12 17:25:07] Batch 0              |         Downloaded: TRIWOBB128F4264F5F
+INFO     [2020-04-12 17:25:07] Batch 0              |   Iter: 6672, Uploaded: TRIWOBB128F4264F5F.mp3
+INFO     [2020-04-12 17:25:10] Batch 0              |         Downloaded: TRURJVA128F931FAC2
+INFO     [2020-04-12 17:25:10] Batch 0              |   Iter: 15506, Uploaded: TRURJVA128F931FAC2.mp3
+INFO     [2020-04-12 17:25:13] Batch 0              |         Downloaded: TRXQNOE128F932C2FD
+INFO     [2020-04-12 17:25:14] Batch 0              |   Iter: 17712, Uploaded: TRXQNOE128F932C2FD.mp3
+INFO     [2020-04-12 17:25:17] Batch 0              |         Downloaded: TRCNXRX128F4270ABD
+INFO     [2020-04-12 17:25:17] Batch 0              |   Iter: 1915, Uploaded: TRCNXRX128F4270ABD.mp3
+INFO     [2020-04-12 17:25:22] Batch 0              |         Downloaded: TRPNWLF128F92F7B78
+INFO     [2020-04-12 17:25:22] Batch 0              |   Iter: 11646, Uploaded: TRPNWLF128F92F7B78.mp3
+INFO     [2020-04-12 17:25:28] Batch 0              |         Downloaded: TRCOTCP12903CD43C4
+INFO     [2020-04-12 17:25:28] Batch 0              |   Iter: 1933, Uploaded: TRCOTCP12903CD43C4.mp3
+INFO     [2020-04-12 17:25:31] Batch 0              |         Downloaded: TRFTURH128F9330FCA
+INFO     [2020-04-12 17:25:32] Batch 0              |   Iter: 4338, Uploaded: TRFTURH128F9330FCA.mp3
+INFO     [2020-04-12 17:25:38] Batch 0              |         Downloaded: TRPNZGM12903CD9143
+INFO     [2020-04-12 17:25:39] Batch 0              |   Iter: 11648, Uploaded: TRPNZGM12903CD9143.mp3
+INFO     [2020-04-12 17:25:41] Batch 0              |         Downloaded: TRCOVPI128F931B5D0
+INFO     [2020-04-12 17:25:42] Batch 0              |   Iter: 1936, Uploaded: TRCOVPI128F931B5D0.mp3
+INFO     [2020-04-12 17:25:45] Batch 0              |         Downloaded: TRXQHWF12903D02324
+INFO     [2020-04-12 17:25:45] Batch 0              |   Iter: 17704, Uploaded: TRXQHWF12903D02324.mp3
+INFO     [2020-04-12 17:25:48] Batch 0              |         Downloaded: TRIWOVY12903CE68A5
+INFO     [2020-04-12 17:25:48] Batch 0              |   Iter: 6674, Uploaded: TRIWOVY12903CE68A5.mp3
+INFO     [2020-04-12 17:25:51] Batch 0              |         Downloaded: TRXRCHH128F428DB09
+INFO     [2020-04-12 17:25:52] Batch 0              |   Iter: 17724, Uploaded: TRXRCHH128F428DB09.mp3
+INFO     [2020-04-12 17:25:54] Batch 0              |         Downloaded: TRXRDYU128F4290ADB
+INFO     [2020-04-12 17:25:55] Batch 0              |   Iter: 17725, Uploaded: TRXRDYU128F4290ADB.mp3
+INFO     [2020-04-12 17:25:57] Batch 0              |         Downloaded: TRLLVVC128F428B577
+INFO     [2020-04-12 17:25:58] Batch 0              |   Iter: 8670, Uploaded: TRLLVVC128F428B577.mp3
+INFO     [2020-04-12 17:26:01] Batch 0              |         Downloaded: TRCNBYA12903D098B4
+INFO     [2020-04-12 17:26:02] Batch 0              |   Iter: 1890, Uploaded: TRCNBYA12903D098B4.mp3
+INFO     [2020-04-12 17:26:06] Batch 0              |         Downloaded: TRXSCHT128F930F924
+INFO     [2020-04-12 17:26:06] Batch 0              |   Iter: 17743, Uploaded: TRXSCHT128F930F924.mp3
+INFO     [2020-04-12 17:26:09] Batch 0              |         Downloaded: TRUQPBX128F9316B24
+INFO     [2020-04-12 17:26:10] Batch 0              |   Iter: 15489, Uploaded: TRUQPBX128F9316B24.mp3
+INFO     [2020-04-12 17:26:14] Batch 0              |         Downloaded: TRFUHCL12903D052E5
+INFO     [2020-04-12 17:26:14] Batch 0              |   Iter: 4360, Uploaded: TRFUHCL12903D052E5.mp3
+INFO     [2020-04-12 17:26:18] Batch 0              |         Downloaded: TRCNJCT128F42636B9
+INFO     [2020-04-12 17:26:19] Batch 0              |   Iter: 1898, Uploaded: TRCNJCT128F42636B9.mp3
+INFO     [2020-04-12 17:26:21] Batch 0              |         Downloaded: TRPMZXK128F92D382A
+INFO     [2020-04-12 17:26:22] Batch 0              |   Iter: 11624, Uploaded: TRPMZXK128F92D382A.mp3
+INFO     [2020-04-12 17:26:34] Batch 0              |         Downloaded: TRCNKID128F427B703
+INFO     [2020-04-12 17:26:35] Batch 0              |   Iter: 1901, Uploaded: TRCNKID128F427B703.mp3
+INFO     [2020-04-12 17:26:39] Batch 0              |         Downloaded: TRXRRBS128F9323755
+INFO     [2020-04-12 17:26:41] Batch 0              |   Iter: 17734, Uploaded: TRXRRBS128F9323755.mp3
+INFO     [2020-04-12 17:26:45] Batch 0              |         Downloaded: TRUQXHB12903CA91A2
+INFO     [2020-04-12 17:26:45] Batch 0              |   Iter: 15496, Uploaded: TRUQXHB12903CA91A2.mp3
+INFO     [2020-04-12 17:26:48] Batch 0              |         Downloaded: TRLLYSJ128F932D5AD
+INFO     [2020-04-12 17:26:49] Batch 0              |   Iter: 8673, Uploaded: TRLLYSJ128F932D5AD.mp3
+INFO     [2020-04-12 17:26:51] Batch 0              |         Downloaded: TRFUCJQ12903CE77A5
+INFO     [2020-04-12 17:26:52] Batch 0              |   Iter: 4353, Uploaded: TRFUCJQ12903CE77A5.mp3
+INFO     [2020-04-12 17:26:55] Batch 0              |         Downloaded: TRFTTDL128F9337C5C
+INFO     [2020-04-12 17:26:56] Batch 0              |   Iter: 4337, Uploaded: TRFTTDL128F9337C5C.mp3
+INFO     [2020-04-12 17:26:59] Batch 0              |         Downloaded: TRLMTKS128F1484C91
+INFO     [2020-04-12 17:26:59] Batch 0              |   Iter: 8687, Uploaded: TRLMTKS128F1484C91.mp3
+INFO     [2020-04-12 17:27:07] Batch 0              |         Downloaded: TRFTSUS128F427C89E
+INFO     [2020-04-12 17:27:08] Batch 0              |   Iter: 4336, Uploaded: TRFTSUS128F427C89E.mp3
+INFO     [2020-04-12 17:27:11] Batch 0              |         Downloaded: TRRXEQI128F422C369
+INFO     [2020-04-12 17:27:11] Batch 0              |   Iter: 13451, Uploaded: TRRXEQI128F422C369.mp3
+INFO     [2020-04-12 17:27:14] Batch 0              |         Downloaded: TRCQHVB128F92F5413
+INFO     [2020-04-12 17:27:14] Batch 0              |   Iter: 1977, Uploaded: TRCQHVB128F92F5413.mp3
+INFO     [2020-04-12 17:27:17] Batch 0              |         Downloaded: TRCQPQH128F42A2ACD
+INFO     [2020-04-12 17:27:18] Batch 0              |   Iter: 1983, Uploaded: TRCQPQH128F42A2ACD.mp3
+INFO     [2020-04-12 17:27:21] Batch 0              |         Downloaded: TRXOVWS128F427B714
+INFO     [2020-04-12 17:27:22] Batch 0              |   Iter: 17660, Uploaded: TRXOVWS128F427B714.mp3
+INFO     [2020-04-12 17:27:25] Batch 0              |         Downloaded: TRUTBJY128F426F68C
+INFO     [2020-04-12 17:27:26] Batch 0              |   Iter: 15538, Uploaded: TRUTBJY128F426F68C.mp3
+Traceback (most recent call last):
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/bin/youtube-dl", line 8, in <module>
+    sys.exit(main())
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/__init__.py", line 474, in main
+    _real_main(argv)
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/__init__.py", line 464, in _real_main
+    retcode = ydl.download(all_urls)
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/YoutubeDL.py", line 2019, in download
+    url, force_generic_extractor=self.params.get('force_generic_extractor', False))
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/YoutubeDL.py", line 808, in extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/YoutubeDL.py", line 863, in process_ie_result
+    return self.process_video_result(ie_result, download=download)
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/YoutubeDL.py", line 1596, in process_video_result
+    self.list_formats(info_dict)
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/YoutubeDL.py", line 2209, in list_formats
+    (info_dict['id'], render_table(header_line, table)))
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/YoutubeDL.py", line 503, in to_screen
+    return self.to_stdout(message, skip_eol, check_quiet=True)
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/YoutubeDL.py", line 517, in to_stdout
+    self._write_string(output, self._screen_file)
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/YoutubeDL.py", line 506, in _write_string
+    write_string(s, out=out, encoding=self.params.get('encoding'))
+  File "/root/.local/share/virtualenvs/Music_Emotions-u30QWrxn/lib/python3.7/site-packages/youtube_dl/utils.py", line 3105, in write_string
+    out.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe
