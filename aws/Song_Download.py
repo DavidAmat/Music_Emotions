@@ -4,7 +4,6 @@ import sys
 import os
 import time
 import numpy as np
-import tqdm
 
 # Logging
 from v_log import VLogger
@@ -119,16 +118,15 @@ def upload_audio_minibatch():
     """
     counter_uploaded_songs = 0
     songs_to_upload = os.listdir("data")
+
     for audio_file in songs_to_upload:
+        if ".mp3" not in audio_file:
+            continue
         audio_local_path = os.path.join("data", audio_file)
         audio_S3_path = get_destination_folder_mp3(audio_file)
-        try:
-            resp_audio = file_to_S3(audio_local_path, audio_S3_path,  S3_BUCKET = 'musicemotions')
-            if resp_audio:
-                counter_uploaded_songs += 1
-            log.info(f"        -- Uploaded: {audio_file}")
-        except:
-            log.info(f"        -- Upload Error: {audio_file}")
+        resp_audio = file_to_S3(audio_local_path, audio_S3_path,  S3_BUCKET = 'musicemotions')
+        counter_uploaded_songs += 1
+        log.info(f"        -- Uploaded: {audio_file}")
         os.remove(os.path.join("data", audio_file))
     return counter_uploaded_songs
 
@@ -148,7 +146,7 @@ log.info("1. Select all songs in match-query (S3) (Completed)")
 log.info("2. Running download iterations")
 iter_upload_each = 20 #each 50 songs, upload to S3
 
-for ii, row in tqdm.tqdm_notebook(df.iterrows()):
+for ii, row in df.iterrows():
     # In case we run the program from an iter
     if ii < num_iter:
         continue
