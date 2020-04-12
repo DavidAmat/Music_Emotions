@@ -4,6 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pylint = "*"
 
 [packages]
 jupyter = "*"
@@ -17,6 +18,7 @@ youtube-dl = "*"
 awscli = "*"
 botocore = "*"
 boto3 = "*"
+pexpect = "*"
 
 [requires]
 python_version = "3.7"
