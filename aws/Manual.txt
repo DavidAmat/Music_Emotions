@@ -214,3 +214,33 @@ Once in Visual Studio that the SSH has worked, we see the problem that the ec2-u
 # Check the permissions to see that all permissions are included
 > ls -ald Music_Emotions/ 
 
+############################
+###########################
+Droplet nodo1
+##########################
+#########################
+pass: qrksjfutivuf
+sudo apt update
+sudo apt install -y python3-pip
+sudo apt install build-essential libssl-dev libffi-dev python3-dev
+sudo pipenv install pipenv
+git clone https://github.com/DavidAmat/Music_Emotions
+
+
+
+# PYTHON and PIPENV
+> sudo su
+> sudo yum install python37
+> curl -O https://bootstrap.pypa.io/get-pip.py
+> python3 get-pip.py --user
+> sudo pip3 install pipenv
+> add to ~/.bashrc file: sudo nano ~/.bashrc >   export PATH=/usr/local/bin:$PATH
+> source ~/.bashrc
+
+## GIT
+> sudo yum install git
+> cd /home/ec2-user/
+> git clone https://github.com/DavidAmat/Music_Emotions
+> cd Music_Emotions
+> git init
+> git pull origin master
