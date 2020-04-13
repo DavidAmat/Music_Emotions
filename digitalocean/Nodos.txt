@@ -1,0 +1,42 @@
+Nodo1: 165.22.90.119
+Nodo2: 157.230.111.131
+Nodo3: 134.122.89.243
+Nodo4: 134.209.225.156
+Nodo5: 165.22.70.99
+Nodo6: 165.22.69.74
+Nodo7: 134.122.88.72
+Nodo8: 104.248.135.65
+Nodo9: 134.122.81.113
+
+
+# Nodo1
+cd Music_Emotions/
+git pull origin droplet
+pipenv shell
+cd aws	
+screen
+python Song_Download.py 0 0 
+
+# Nodo2
+python Song_Download.py 1 0 
+
+# Nodo3
+python Song_Download.py 2 0 
+
+# Nodo4
+python Song_Download.py 3 0
+
+# Nodo5
+python Song_Download.py 4 0
+
+# Nodo6
+python Song_Download.py 5 0
+
+# Nodo7
+python Song_Download.py 6 0    
+
+# Nodo8
+python Song_Download.py 7 0
+
+# Nodo9
+python Song_Download.py 8 0  

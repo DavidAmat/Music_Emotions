@@ -243,6 +243,7 @@ sudo apt install ffmpeg
 
 pipenv run jupyter notebook --no-browser --allow-root
 
+# list processes on port:  lsof -i:8080 // kill: kill $(lsof -t -i:8888)
 
 ############################
 ###########################
