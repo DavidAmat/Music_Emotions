@@ -136,12 +136,47 @@ log.info("1. Select all songs in match-query (S3) (Completed)")
 ## RUN the download!
 ######################################################################################################
 log.info("2. Running download iterations")
-counter_iteration = 0;
+counter_iteration = 0
+counter_skiped = 0
 for ii, row in df.iterrows():
     counter_iteration += 1
     # In case we run the program from an iter
     if counter_iteration < num_iter:
         continue
+
+    # WEBSCRAPPING PAUSES ------------------------------------------------------------------------
+    # PAUSE POR SKIPEDS
+    if counter_skiped == 5:
+        log.info(f"     Pausando iter: {counter_iteration} por 5 Skippeds seguidos")
+        log.info("10 min pause...")
+        time.sleep(600)
+        log.info("10 min pause (finished)")
+
+    # PAUSE POR SKIPEDS
+    if counter_skiped == 10:
+        # It seems like we are blocked
+        log.info(f"     Pausando iter: {counter_iteration} por 10 Skippeds seguidos")
+        log.info("3 hour pause...")
+        time.sleep(10800)
+        log.info("3 hour pause (finished)")
+
+    if counter_skiped > 10:
+        iteration_restart = counter_iteration - 10
+        log.info(f"We have been blocked, restart at iteration {iteration_restart}")
+        sys.exit("Program exited due to IP blocking")
+
+    if (counter_iteration % 300) == 0:
+        # Each 300 iterations do a 10 minute sleep
+        log.info(f"     Descanso iter: {counter_iteration}: 10 min")
+        time.sleep(600)
+
+    time.sleep(15)
+
+    
+    # WEBSCRAPPING PAUSES ------------------------------------------------------------------------
+    
+    
+
 
     track_id, url, batch_id = row
     # Get the audio sizes available and filter out those that are over the reasonable length
@@ -151,9 +186,13 @@ for ii, row in df.iterrows():
         #ERROR: tsoVU04XA00: YouTube said: The uploader has not made this video available in your country.
         resp = False
         log.info(f"        Skipped: {track_id}")
+        counter_skiped +=1
+        continue
     
     # Skip the song that exceeds file size max in MiB:
     if not resp:
+        log.info(f"        Skipped: {track_id}")
+        # no cuenta como skipped
         continue
         
     # Specify command to download audio
@@ -165,11 +204,17 @@ for ii, row in df.iterrows():
     except:
         #ERROR: tsoVU04XA00: YouTube said: The uploader has not made this video available in your country.
         log.info(f"        Skipped: {track_id}")
+        counter_skiped +=1
+        comando_output = False
+        continue
+
     if "100%" in str(comando_output):
+        counter_skiped = 0 # re-initialize the counter since it has downloaded a song!
         log.info(f"        Downloaded: {track_id}")
     else:
         # create a log info event indicating that error
         log.info(f"        Skipped: {track_id}")
+        counter_skiped +=1
         continue
     
     # Upload song to S3
@@ -178,9 +223,10 @@ for ii, row in df.iterrows():
     try:
         response_S3 = upload_audio_minibatch(song_name_mp3)
     except:
-        log.info(f"        Skipped: {track_id}")
+        log.info(f"        Skipped upload to S3: {track_id}")
     if response_S3:
         log.info(f"  Iter: {counter_iteration}, Uploaded: {track_id}")
+        counter_skiped = 0
     else:
         log.info(f"  Iter: {counter_iteration}, Failed: {track_id}")
 
