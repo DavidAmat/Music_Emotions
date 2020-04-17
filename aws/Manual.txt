@@ -155,8 +155,11 @@ http://ec2-18-203-186-196.eu-west-1.compute.amazonaws.com:8888/?token=19686004ac
 > cd /home/ec2-user/
 > git clone https://github.com/DavidAmat/Music_Emotions
 > cd Music_Emotions
-> git init
-> git pull origin master
+
+> ###git init
+IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!
+> git pull origin droplet 
+
 
 ## INSTALL dependencies with pipenv
 > cd /home/ec2-user/Music_Emotions
@@ -184,6 +187,25 @@ Already installed in pipenv!
 But we need to install ffmpeg
 > sudo apt install ffmpeg
 cp -a /usr/local/bin/ffmpeg/ffmpeg-4.2.1-amd64-static/ . /usr/local/bin/ffmpeg/
+
+## On AMAZON EC2, to instal FFMPEG:
+cd /usr/local/bin
+mkdir ffmpeg
+cd ffmpeg
+wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+tar xvf  ffmpeg-release-amd64-static.tar.xz
+mv ffmpeg-4.2.2-amd64-static/ffmpeg .
+ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
+
+# Go back to Music_Emotions and run again:
+pipenv install
+mkdir data 
+mkdir log 
+
+
+
+
+
 
 ############################
 ###########################
@@ -252,4 +274,18 @@ Spotify API
 #########################
 Client ID 348f94d3a73241188b2a89c91e1cfaee
 Client Secret b5b29b040ab843cf842cf4eb875caff1
+
+
+
+
+########################################################
+
+########################################################
+
+
+# INSTANCE FOR MONITORING
+
+########################################################
+
+########################################################
 
