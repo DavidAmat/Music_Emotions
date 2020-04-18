@@ -17,6 +17,7 @@ youtube-dl = "*"
 awscli = "*"
 botocore = "*"
 boto3 = "*"
+vadersentiment = "*"
 
 [requires]
 python_version = "3.7"
