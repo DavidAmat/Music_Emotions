@@ -18,6 +18,7 @@ awscli = "*"
 botocore = "*"
 boto3 = "*"
 vadersentiment = "*"
+spotipy = "*"
 
 [requires]
 python_version = "3.7"
