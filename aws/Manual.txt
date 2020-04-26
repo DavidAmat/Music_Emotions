@@ -155,8 +155,11 @@ http://ec2-18-203-186-196.eu-west-1.compute.amazonaws.com:8888/?token=19686004ac
 > cd /home/ec2-user/
 > git clone https://github.com/DavidAmat/Music_Emotions
 > cd Music_Emotions
-> git init
-> git pull origin master
+
+> ###git init
+IMPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!
+> git pull origin droplet 
+
 
 ## INSTALL dependencies with pipenv
 > cd /home/ec2-user/Music_Emotions
@@ -184,6 +187,25 @@ Already installed in pipenv!
 But we need to install ffmpeg
 > sudo apt install ffmpeg
 cp -a /usr/local/bin/ffmpeg/ffmpeg-4.2.1-amd64-static/ . /usr/local/bin/ffmpeg/
+
+## On AMAZON EC2, to instal FFMPEG:
+cd /usr/local/bin
+mkdir ffmpeg
+cd ffmpeg
+wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+tar xvf  ffmpeg-release-amd64-static.tar.xz
+mv ffmpeg-4.2.2-amd64-static/ffmpeg .
+ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
+
+# Go back to Music_Emotions and run again:
+pipenv install
+mkdir data 
+mkdir log 
+
+
+
+
+
 
 ############################
 ###########################
@@ -226,21 +248,215 @@ sudo apt install build-essential libssl-dev libffi-dev python3-dev
 sudo pipenv install pipenv
 git clone https://github.com/DavidAmat/Music_Emotions
 
+sudo apt install python3.7
+pipenv shell
+pipenv install
+
+pipenv run jupyter notebook --generate-config
+vi /root/.jupyter/jupyter_notebook_config.py
+pipenv install pexpect 
+sudo apt install ffmpeg
+
+pipenv install awscli
+aws configure
+
+sudo apt install ffmpeg
+#cp -a /usr/local/bin/ffmpeg/ffmpeg-4.2.1-amd64-static/ . /usr/local/bin/ffmpeg/
+
+pipenv run jupyter notebook --no-browser --allow-root
+
+# list processes on port:  lsof -i:8080 // kill: kill $(lsof -t -i:8888)
+
+############################
+###########################
+Spotify API
+##########################
+#########################
+Client ID 348f94d3a73241188b2a89c91e1cfaee
+Client Secret b5b29b040ab843cf842cf4eb875caff1
 
 
-# PYTHON and PIPENV
+
+
+########################################################
+
+########################################################
+
+
+
+
+IP: 18.203.186.196
+DNS Public: ec2-18-203-186-196.eu-west-1.compute.amazonaws.com
+
+# Putty
+	HostName (IP Address): 34.253.193.30
+	# Data - Autologin username: centos
+	#Auth (SSH): MyIrelandKey.ppk
+
+########################################################
+########################################################
+#			Linux
+########################################################
+########################################################
+//////////////////// IMPORTANT!!! ///////////////
 > sudo su
+> sudo yum update -y
+
+# PIPENV
+(https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-linux.html)
 > sudo yum install python37
 > curl -O https://bootstrap.pypa.io/get-pip.py
 > python3 get-pip.py --user
 > sudo pip3 install pipenv
-> add to ~/.bashrc file: sudo nano ~/.bashrc >   export PATH=/usr/local/bin:$PATH
-> source ~/.bashrc
+## add pipenv to path
+//////////////////// IMPORTANT!!! ///////////////
+> export PATH=/usr/local/bin:$PATH
+
 
 ## GIT
 > sudo yum install git
 > cd /home/ec2-user/
 > git clone https://github.com/DavidAmat/Music_Emotions
-> cd Music_Emotions
-> git init
-> git pull origin master
+
+## INSTALL dependencies with pipenv
+> cd /home/ec2-user/Music_Emotions
+> pipenv shell
+> pipenv install
+
+###################################################
+#	Jupyter Notebook local-EC2
+###################################################
+(https://medium.com/@alexjsanchez/python-3-notebooks-on-aws-ec2-in-15-mostly-easy-steps-2ec5e662c6c6)
+> change SG adding Inbound rule for TCP in port range 8888 from source 0.0.0.0/0
+
+> pipenv run jupyter notebook --generate-config
+# this will tell you the route of the file /root/.jupyter/jupyter_notebook_config.py
+
+> vi /root/.jupyter/jupyter_notebook_config.py
+# use the / function of vi to search for: c.NotebookApp.ip = '*'
+# use function "i" to (INSERT) modify the c.NotebookApp.ip from 'localhost' to '*'
+# Hits will allow that the notebook is open for all ips
+
+> pipenv run jupyter notebook --no-browser --allow-root
+#will run the notebook with this message
+#http://ip-172-31-23-251.eu-west-1.compute.internal:8888/?token=272a3abdb1746537c336a8e80f870ddd30d4b00c5a984f3e
+# get the token and go to your local browser and type
+# si no funciona probar sense el no-browser
+
+> http://ec2-18-203-186-196.eu-west-1.compute.amazonaws.com:8888/tree?
+# Public DNS Ipv4 (for the instance): ec2-18-203-186-196.eu-west-1.compute.amazonaws.com
+# Port 8888 is the one opened to access as said in the SG
+# It will ask the token: 272a3abdb1746537c336a8e80f870ddd30d4b00c5a984f3e
+# Source problem: https://stackoverflow.com/questions/43241272/can-not-connect-to-jupyter-notebook-on-aws-ec2-instance
+# Problem: do not use https!!!! use http
+#
+> pipenv install colorama
+# falta en la distribucion linux
+
+
+###################################################
+#	Create S3
+###################################################
+
+# Create a S3 in Irealnd
+
+# Create a IAM role to use boto3 for migrating clean.db to filesystem in S3: davidS3
+
+# Put only permissions to access S3
+
+> pipenv install awscli
+> aws configure
+# put the credentials in D:\Google Drive\25. SaturdaysAI\0_Project\project\aws\ireland\credentials_davidS3.csv
+# the region is Ireland: eu-west-1
+# output format is: json
+
+> pipenv install botocore
+> pipenv install boto3
+# Make sure that in C:\Users\David\.aws two files are created: config and credentials 
+
+
+> Run the script in AWS/Migrate_Clean_S3.ipynb to upload all the NONMATCH table batches from 0 to 35 to the S3 folder nonmatch-query
+
+###################################################
+#	Read files in S3 from EC2
+###################################################
+# If you happen to exit the pipenv environment:
+1) pipenv shell
+2) pipenv install
+3) sudo su
+4) export PATH=/usr/local/bin:$PATH
+5) pipenv run jupyter notebook --no-browser --allow-root
+
+http://ec2-18-203-186-196.eu-west-1.compute.amazonaws.com:8888/?token=46ff09c5e7388c4134882a85a592f757be6bcbc944eb08eb
+http://ec2-18-203-186-196.eu-west-1.compute.amazonaws.com:8888/?token=19686004ac2121d489d63b17481b38a9430e64be663fed56
+
+
+##################################################
+#Installing selenium
+##################################################
+> sudo su
+
+1) https://understandingdata.com/install-google-chrome-selenium-ec2-aws/
+
+2) For the error of LibX11: https://unix.stackexchange.com/questions/1162/libx11-so-6-not-found
+> yum -y install libX11  
+
+
+
+
+
+
+
+########################################################
+
+########################################################
+
+
+
+# SONG DOWNLOADING 
+
+
+
+########################################################
+
+########################################################
+
+
+> ALL CHANGES ARE IMPLEMENTED IN BRANCH: nodes
+
+# 1) cambiar el nombre de la instancia nodeX on X=1,2,3,4,5,... 35
+sudo su
+cd Music_Emotions
+pipenv shell
+pipenv install
+cd aws
+nohup python Song_Download_Queues.py &
+
+
+> DNS of images:
+
+node1 - ec2-34-242-142-38.eu-west-1.compute.amazonaws.com
+node2 - ec2-34-241-10-117.eu-west-1.compute.amazonaws.com
+node3 - ec2-3-250-1-43.eu-west-1.compute.amazonaws.com
+node4 - ec2-34-242-1-55.eu-west-1.compute.amazonaws.com
+node5 - ec2-54-154-184-143.eu-west-1.compute.amazonaws.com
+node6 - ec2-34-244-60-58.eu-west-1.compute.amazonaws.com
+node7 - ec2-34-244-15-89.eu-west-1.compute.amazonaws.com
+node8 - ec2-52-30-3-235.eu-west-1.compute.amazonaws.com
+node9 - ec2-54-77-78-51.eu-west-1.compute.amazonaws.com
+node10 - ec2-34-242-73-15.eu-west-1.compute.amazonaws.com
+node11 - 
+node12 -
+node13 - 
+node14 -
+node15 - 
+node16 -
+node17 - 
+node18 -
+node19 - 
+node20 -
+
+
+
+
+
