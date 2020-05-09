@@ -3,3 +3,12 @@ data/MSD/clean.db
 data/MSD/raw.db
 lyrics_scrapping/lyrics_firstattempt.csv
 lyrics_scrapping/lyrics_firstattempt
+aws/migration_db_S3/tracks_S3_v2.csv
+audio_processing/tmp/Found.mp3
+audio_processing/tmp/Found.wav
+audio_processing/tmp/song.mp3
+audio_processing/tmp/song.wav
+articles/Book_DeepLearning_Music.pdf
+articles/MusicTranscriptionDeepLearning.pdf
+audio_processing/audio_processing_dev.ipynb
+audio_processing/.ipynb_checkpoints/audio_processing_dev-checkpoint.ipynb
