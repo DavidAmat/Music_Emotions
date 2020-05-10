@@ -12,3 +12,5 @@ articles/Book_DeepLearning_Music.pdf
 articles/MusicTranscriptionDeepLearning.pdf
 audio_processing/audio_processing_dev.ipynb
 audio_processing/.ipynb_checkpoints/audio_processing_dev-checkpoint.ipynb
+audio_processing/tmp/Clocks.mp3
+audio_processing/tmp/Clocks.wav
